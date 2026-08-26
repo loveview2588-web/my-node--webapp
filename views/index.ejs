@@ -1,0 +1,40 @@
+<%-include('partials/head')%>
+<%-include('partials/navbar')%>
+
+<main>
+        <section class="container mt-5">
+            <div class="text-center bg-light p-5 rounded-3 shadow-sm">
+                <h1 class="display-4 fw-bold text-success">Welcome to SawongWanglang Cafe</h1>
+                <p class="lead fw-semibold text-muted">Dairy product only, non transfat and non chemical.</p>
+                <hr class="my-4 mx-auto" style="max-width: 100px;">
+                <p class="lead fs-5">ยินดีต้อนรับสู่มุมพักใจเล็กๆ ที่อบอวลไปด้วยกลิ่นเนยแท้และนมออร์แกนิก เราตั้งใจอบขนมสดใหม่ทุกวัน เพื่อให้ทุกคำที่คุณทานคือความสุขที่เสิร์ฟตรงจากเตา... ลองแวะมาเติมพลังบวกในวันเหนื่อยๆ ด้วยกันนะคะ</p>
+                <a href="https://www.facebook.com/share/p/1AsCTotXus/?__cft__[0]=AZaDomFq7vvxQRzihPhdAxDFutsRkSt4v9euFRnLxM-lomvOr5UT7HbGhT405A5InmS2qhueLxKHlHU8uYyELseWtMbPbB-zhiUgTKpghL5guz-weU8XlKRSUuQMgsX87OuaGA6CHog8W-v-JAvwRCR89_cYKXAv0qMEqIM5eaUZ208O9dC0rUg0lZJcsNwUj3k&__tn__=%2CdC%2CP-R" target="_blank" class="btn btn-success btn-lg mt-3 shadow-sm">📍 ปักหมุดมาเจอกันเลย / ดูเมนูวันนี้</a>
+            </div> 
+        </section>
+        
+        <section class="container mt-5 mb-5">
+            <div class="col-md-6 mx-auto bg-white p-4 rounded-3 shadow-sm border">
+                
+                <form>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Your Name">
+                        <label for="floatingInput">ขื่อ</label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="floatingEmail" placeholder="name@example.com">
+                        <label for="floatingEmail">อีเมล</label>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="shopFeedback" class="form-label fw-semibold text-secondary"></label>
+                        <textarea class="form-control" id="shopFeedback" rows="4" placeholder="พิมพ์ข้อความของคุณที่นี่..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-success w-100 btn-lg mt-2">ส่งข้อมูลให้ร้าน</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+<%- include('partials/footer') %>

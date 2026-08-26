@@ -1,0 +1,37 @@
+<%- include('partials/head') %>
+    <%- include('partials/navbar') %>
+
+        <main class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h2 class="mb-4">สมัครสมาชิก</h2>
+
+                    <% if (typeof message !=='undefined' && message !==null) { %>
+
+                        <div class="alert alert-<%= messageType %>">
+                            <%= message %>
+                        </div>
+
+                        <% } %>
+
+                            <form action="/register" method="POST" class="card p-4 shadow-sm">
+
+                                <!-- ชื่อผู้ใช้งาน -->
+                                <input type="text" name="username" placeholder="ชื่อผู้ใช้งาน"
+                                    class="form-control mb-3">
+
+                                <!-- อีเมล -->
+                                <input type="email" name="email" placeholder="อีเมล" class="form-control mb-3">
+
+                                <!-- รหัสผ่าน -->
+                                <input type="password" name="password" placeholder="รหัสผ่าน" class="form-control mb-3">
+
+                                <button type="submit" class="btn btn-primary w-100 mt-3">
+                                    ลงทะเบียน
+                                </button>
+                            </form>
+                 
+                 </div>
+            </div>
+        </main>
+        <%- include('partials/footer') %>

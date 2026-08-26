@@ -1,0 +1,25 @@
+<%- include('partials/head') %>
+<%- include('partials/navbar') %>
+<main class="container mt-5">
+<h2 class="mb-4">รายชื่อผู้ใช้งานในระบบ</h2>
+<table class="table table-bordered table-striped">
+<thead class="table-dark">
+<B>
+<th>ID</th><th>ชื่อผู้ใช้งาน</th>
+<th>อีเมล</th><th>วันที่สมัคร</th>
+</tr>
+</thead>
+<tbody>
+<% users_data.forEach(function(user) { %>
+<tr>
+<td><%= user.id %></td>
+<td><%= user.username %></td>
+<td><%= user.email %></td>
+<td><%= new Date(user.created_at)
+.toLocaleString('th-TH') %></td>
+</tr>
+<% }); %>
+</tbody>
+</table>
+</main>
+<%- include('partials/footer') %>

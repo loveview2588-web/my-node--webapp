@@ -1,0 +1,42 @@
+<%- include('partials/head') %>
+    <%- include('partials/navbar') %>
+        <main class="container mt-5">
+            <h2 class="mb-4">รายชื่อสินค้าในระบบ</h2>
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>product_name</th>
+                        <th>description</th>
+                        <th>price</th>
+                        <th>stock</th>
+                        <th>created_at</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% product_data.forEach(function(product) { %>
+                        <tr>
+                            <td>
+                                <%= product.id %>
+                            </td>
+                            <td>
+                                <%= product.product_name %>
+                            </td>
+                            <td>
+                                <%= product.description %>
+                            </td>
+                            <td>
+                                <%= product.price %>
+                            </td>
+                            <td>
+                                <%= product.stock %>
+                            </td>
+                            <td>
+                                <%= new Date(product.created_at) .toLocaleString('th-TH') %>
+                            </td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
+        </main>
+        <%- include('partials/footer') %>
